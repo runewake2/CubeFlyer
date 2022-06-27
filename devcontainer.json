@@ -7,7 +7,8 @@
           "visualstudioexptteam.vsc",
           "dbaeumer.vscode-eslint",
           "eamodio.gitlens",
-          "redhat.vscode-yaml"
+          "redhat.vscode-yaml",
+          "vsls-contrib.codetour"
         ]
       }
     },
