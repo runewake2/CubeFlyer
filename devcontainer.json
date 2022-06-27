@@ -1,0 +1,15 @@
+{
+    "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-12",
+  
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "visualstudioexptteam.vsc",
+          "dbaeumer.vscode-eslint",
+          "eamodio.gitlens",
+          "redhat.vscode-yaml"
+        ]
+      }
+    },
+    "forwardPorts": [3000]
+  }
