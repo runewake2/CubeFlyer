@@ -1,7 +1,6 @@
 const gameHeight = 5; // Defines the height of the floor and ceiling in the game.
 
 var camera;
-var sphere;
 
 var createScene = function () {
     // This creates a basic Babylon Scene object (non-mesh)
@@ -29,11 +28,12 @@ var createScene = function () {
     ceiling.position.y = gameHeight + 0.5; 
 
     createHud();
+    createObject(new Player());
 
     return scene;
 };
 
 var timer = 0;
 var updateGame = function() {
-    updatePlayer();
+    updateGameState();
 };
