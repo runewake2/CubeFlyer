@@ -5,7 +5,7 @@ var createHud = function() {
 
     // Create a Text Block that can display the current score
     scoreText = new BABYLON.GUI.TextBlock();
-    scoreText.text = "Score: 0";
+    scoreText.text = "Highscore: 100";
     scoreText.fontFamily = "Comic Sans, Comic Sans MS";
     scoreText.color = "white";
     scoreText.fontSize = 48;
