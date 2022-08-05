@@ -4,7 +4,6 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
 const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
 const scene = createScene(); //Call the createScene function from scene.js
-setupInputs(); // This configures the input controller support in controls.js
 
 // Register a render loop to repeatedly render the scene
 engine.runRenderLoop(function () {
