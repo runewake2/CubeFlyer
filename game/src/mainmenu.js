@@ -109,15 +109,27 @@ class MainMenu extends GameObject {
         this.greetingText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
         this.greetingText.width = .5;
         this.greetingText.height = .7;
+
+        this.instructionsText = new BABYLON.GUI.TextBlock();
+        this.instructionsText.text = "press any key to play";
+        this.instructionsText.fontFamily = "Impact";
+        this.instructionsText.color = "#aafffa";
+        this.instructionsText.fontSize = 32;
+        this.instructionsText.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
+        this.instructionsText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
+        this.instructionsText.width = .5;
+        this.instructionsText.height = .9;
     
         this.hudTexture.addControl(this.welcomeText);
         this.hudTexture.addControl(this.greetingText);
+        this.hudTexture.addControl(this.instructionsText);
     }
 
     
     hideUI() {
         this.hudTexture.removeControl(this.welcomeText);
         this.hudTexture.removeControl(this.greetingText);
+        this.hudTexture.removeControl(this.instructionsText);
     }
 }
 
