@@ -12,8 +12,8 @@ class Player extends GameObject {
         this.setupInputs();
 
         // Create the player object - a 1 unit square cube
-        let cubeOptions = {width: 1, height: 1, depth: 1};
-        this.playerMesh = BABYLON.MeshBuilder.CreateBox("bird", cubeOptions, scene);
+        let boxOptions = {width: 1, height: 1, depth: 1};
+        this.playerMesh = BABYLON.MeshBuilder.CreateBox("bird", boxOptions, scene);
     }
 
     onDestroy() {
