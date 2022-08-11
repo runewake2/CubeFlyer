@@ -1,6 +1,9 @@
 var gamepadManager = new BABYLON.GamepadManager();
 
 var deviceSourceManager;
+
+const obstacleSpawnInterval = 3.5;
+
 class Player extends GameObject {
     constructor() {
         super();
@@ -8,6 +11,7 @@ class Player extends GameObject {
 
     init() {
         // A Vector2 is a 2 dimensional vector with X and Y dimension - track velocity with this.
+        this.obstacleSpawnTimer = obstacleSpawnInterval;
         this.velocity = new BABYLON.Vector2(0, 0);
         this.setupInputs();
 
@@ -26,9 +30,17 @@ class Player extends GameObject {
         this.capVelocity(20);
         this.playerMesh.position.y += this.velocity.y * deltaTime;
         if (this.testGameOver()) {
-            console.log("out of bounds!");
-            createObject(new Player());
+            mainMenu.visible = true;
             destroyObject(this);
+        }
+
+        // To simplify game code the Player handles spawning obstacles (this makes it easier to track for collisions without writing a full handler)
+        // A side effect of this is that creating or destroying the Player can pause or start the game.
+        this.obstacleSpawnTimer -= deltaTime;
+        if (this.obstacleSpawnTimer <= 0) {
+            this.obstacleSpawnTimer = obstacleSpawnInterval;
+            
+            createObject(new Barrier());
         }
     }
 
@@ -49,7 +61,6 @@ class Player extends GameObject {
 
     setupInputs() {
         deviceSourceManager = new BABYLON.DeviceSourceManager(scene.getEngine());
-        console.log('Initializing inputs');
         /**
          * onDeviceConnectedObservable is fired after a device is connected so any code that we
          * put in here should be able to reliably work against an existing device.
