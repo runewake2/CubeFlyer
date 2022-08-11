@@ -28,7 +28,6 @@ var createScene = function () {
     ceiling.position.y = gameHeight + 0.5; 
 
     createHud();
-    createObject(new Player());
 
     return scene;
 };
