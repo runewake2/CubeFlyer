@@ -15,6 +15,8 @@ class Barrier extends GameObject {
         const boxOptions = {width: 1, height: 10, depth: 1};
         this.ceilingBox = BABYLON.MeshBuilder.CreateBox("ceilingObstacle", boxOptions, scene);
         this.floorBox = BABYLON.MeshBuilder.CreateBox("floorObstacle", boxOptions, scene);
+        this.ceilingBox.checkCollisions = true;
+        this.floorBox.checkCollisions = true;
         this.assignLocations();
     }
 
@@ -25,6 +27,7 @@ class Barrier extends GameObject {
     }
 
     update(deltaTime) {
+
         this.location -= deltaTime * obstacleSpeed;
 
         // Update the players physics:
