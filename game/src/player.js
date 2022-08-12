@@ -10,9 +10,9 @@ class Player extends GameObject {
     }
 
     init() {
+        this.obstacleSpawnTimer = 0;
         // A Vector2 is a 2 dimensional vector with X and Y dimension - track velocity with this.
-        this.obstacleSpawnTimer = obstacleSpawnInterval;
-        this.velocity = new BABYLON.Vector2(0, 0);
+        this.velocity = new BABYLON.Vector3(0, 0);
         this.setupInputs();
 
         // Create the player object - a 1 unit square cube
@@ -30,8 +30,7 @@ class Player extends GameObject {
         this.capVelocity(20);
         this.playerMesh.position.y += this.velocity.y * deltaTime;
         if (this.testGameOver()) {
-            mainMenu.visible = true;
-            destroyObject(this);
+            this.endGame()
         }
 
         // To simplify game code the Player handles spawning obstacles (this makes it easier to track for collisions without writing a full handler)
@@ -44,14 +43,30 @@ class Player extends GameObject {
         }
     }
 
+    endGame() {
+        // This is used to identify and remove barrier objects from the scene
+        destroyMatchingObjects((gobj) => gobj.location !== undefined);
+
+        mainMenu.visible = true;
+        destroyObject(this);
+        resetScore();
+    }
+
     testGameOver() {
-        return this.playerMesh.position.y > gameHeight ||
-               this.playerMesh.position.y < -gameHeight;
+        let outOfBounds = this.playerMesh.position.y > gameHeight ||
+                          this.playerMesh.position.y < -gameHeight;
+
+        let collision = testMatchingObjects((gameObject) => gameObject.testCollision !== undefined
+            , (gameObject) => gameObject.testCollision(this.playerMesh.position.y));
+
+        if (collision) {
+            console.log("IMPACT");
+        }
+
+        return outOfBounds || collision;
     }
     
     onPlayerFlight() {
-        console.log(this.velocity);
-        console.log(flightForce);
         this.velocity.y += flightForce;
     }
     
