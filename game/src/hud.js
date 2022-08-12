@@ -1,4 +1,5 @@
-var lastConnected;
+var score = 0;
+var scoreText;
 
 var createHud = function() {
     var hudTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
@@ -15,4 +16,18 @@ var createHud = function() {
     scoreText.height = .15;
 
     hudTexture.addControl(scoreText);
+}
+
+var updateScoreText = function() {
+    scoreText.text = "Score: " + score;
+}
+
+var resetScore = function() {
+    score = 0;
+    updateScoreText();
+}
+
+var addScore = function(points) {
+    score += points;
+    updateScoreText();
 }
