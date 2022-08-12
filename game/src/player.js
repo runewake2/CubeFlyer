@@ -18,10 +18,6 @@ class Player extends GameObject {
         // Create the player object - a 1 unit square cube
         const boxOptions = {width: 1, height: 1, depth: 1};
         this.playerMesh = BABYLON.MeshBuilder.CreateBox("bird", boxOptions, scene);
-        this.playerMesh.checkCollisions = true;
-        this.playerMesh.onCollideObservable.add(function (d,s) {
-            this.endGame()
-        });
     }
 
     onDestroy() {
@@ -50,15 +46,24 @@ class Player extends GameObject {
     endGame() {
         // This is used to identify and remove barrier objects from the scene
         destroyMatchingObjects((gobj) => gobj.location !== undefined);
-        
+
         mainMenu.visible = true;
         destroyObject(this);
         resetScore();
     }
 
     testGameOver() {
-        return this.playerMesh.position.y > gameHeight ||
-               this.playerMesh.position.y < -gameHeight;
+        let outOfBounds = this.playerMesh.position.y > gameHeight ||
+                          this.playerMesh.position.y < -gameHeight;
+
+        let collision = testMatchingObjects((gameObject) => gameObject.testCollision !== undefined
+            , (gameObject) => gameObject.testCollision(this.playerMesh.position.y));
+
+        if (collision) {
+            console.log("IMPACT");
+        }
+
+        return outOfBounds || collision;
     }
     
     onPlayerFlight() {

@@ -15,8 +15,6 @@ class Barrier extends GameObject {
         const boxOptions = {width: 1, height: 10, depth: 1};
         this.ceilingBox = BABYLON.MeshBuilder.CreateBox("ceilingObstacle", boxOptions, scene);
         this.floorBox = BABYLON.MeshBuilder.CreateBox("floorObstacle", boxOptions, scene);
-        this.ceilingBox.checkCollisions = true;
-        this.floorBox.checkCollisions = true;
         this.assignLocations();
     }
 
@@ -46,5 +44,15 @@ class Barrier extends GameObject {
         this.floorBox.position.y = height - gapSize/2 - 5;
         this.ceilingBox.position.x = this.location;
         this.floorBox.position.x = this.location;
+    }
+
+    testCollision(playerHeight) {
+        if (this.location > -1 && this.location < 1) { // In the same location as the player
+            if (playerHeight + 5.5 > this.ceilingBox.position.y || // 5.5 is the half the height of the box + half the height of the player
+                playerHeight - 5.5 < this.floorBox.position.y) {
+                    return true;
+            }
+        }
+        return false;
     }
 }

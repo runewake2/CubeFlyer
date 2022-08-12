@@ -18,6 +18,18 @@ var destroyMatchingObjects = function(predicate) {
     });
 }
 
+var testMatchingObjects = function(objectMatch, predicate) {
+    var result = false;
+    currentGameObjects.forEach(gameObject => {
+        if (objectMatch(gameObject)) {
+            if (predicate(gameObject)) {
+                result = true;
+            }
+        }
+    });
+    return result;
+}
+
 var updateGameState = function() {
     // Delta Time is used to track how much time has passed since the last update
     // We use this instead of a fixed value to account for changes in frame rate (lag)

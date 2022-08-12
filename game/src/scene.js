@@ -26,12 +26,8 @@ var createScene = function () {
     var ceiling = BABYLON.MeshBuilder.CreateBox("ceiling", {width: 100, depth: 6, height: 1}, scene);
     ground.position.y = -gameHeight - 0.5; // +/- 0.5 to account for height of the cubes
     ceiling.position.y = gameHeight + 0.5; 
-    ground.checkCollisions = true;
-    ceiling.checkCollisions = true;
 
     createHud();
-
-    scene.collisionsEnabled = true;
 
     return scene;
 };
