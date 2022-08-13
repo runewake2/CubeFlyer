@@ -7,6 +7,7 @@ const greetings = [
     '1000% more Cube!',
     'A Whole New Dimension!',
     'Are These Voxels?',
-    "HELLO, OPEN SOURCE"
+    "HELLO, OPEN SOURCE",
+    "let's make some change!",
     'Hi Welly is editing this file.'
 ];
