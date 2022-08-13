@@ -9,6 +9,7 @@ const greetings = [
     'A Whole New Dimension!',
     'Are These Voxels?',
     'Whaddup??',
+    'a = -9.8m/s^2',
     'Come fly with me!',
     'Hello Open Source',
     'Cubey Bird',
