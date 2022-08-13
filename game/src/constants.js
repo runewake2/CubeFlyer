@@ -12,5 +12,6 @@ const greetings = [
     'Come fly with me!',
     'Hello Open Source',
     'Cubey Bird',
-    'Hello Open Source!'
+    'Hello Open Source!',
+    'Hello!@'
 ];
