@@ -8,4 +8,5 @@ const greetings = [
     'A Whole New Dimension!',
     'Are These Voxels?',
     'a = -9.8m/s^2'
+    'Hello Open Source!'
 ];
