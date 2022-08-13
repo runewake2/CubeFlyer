@@ -7,7 +7,6 @@ const greetings = [
     '1000% more Cube!',
     'Hello, this is a greeting, please be greeted',
     'A Whole New Dimension!',
-    'Dragon and Dun'
     'Are These Voxels?',
     'Cubey Bird',
     'Hello Open Source!'
