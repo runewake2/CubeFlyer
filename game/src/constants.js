@@ -10,6 +10,7 @@ const greetings = [
     'Are These Voxels?',
     'Cubeular!',
     'Hello Open Source!',
+    'Whaddup??',
     'a = -9.8m/s^2',
     'Come fly with me!',
     'Hello Open Source',
