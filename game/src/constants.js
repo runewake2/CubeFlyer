@@ -7,6 +7,6 @@ const greetings = [
     '1000% more Cube!',
     'A Whole New Dimension!',
     'Are These Voxels?',
-    'a = -9.8m/s^2'
+    'a = -9.8m/s^2',
     'Hello Open Source!'
 ];
