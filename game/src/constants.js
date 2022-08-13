@@ -6,5 +6,7 @@ const greetings = [
     'It\'s a plane!',
     '1000% more Cube!',
     'A Whole New Dimension!',
-    'Are These Voxels?'
+    'Are These Voxels?',
+    'Now in 5 dimensions!',
+    "it's called cubism okay"
 ];
