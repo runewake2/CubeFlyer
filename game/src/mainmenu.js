@@ -98,7 +98,7 @@ class MainMenu extends GameObject {
         this.welcomeText.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
         this.welcomeText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
         this.welcomeText.width = .5;
-        this.welcomeText.height = .6;
+        this.welcomeText.height = .5;
         
         this.greetingText = new BABYLON.GUI.TextBlock();
         this.greetingText.text = greeting;
