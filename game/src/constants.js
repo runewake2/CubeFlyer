@@ -10,6 +10,8 @@ const greetings = [
     'Hello, this is a greeting, please be greeted',
     'A Whole New Dimension!',
     'Are These Voxels?',
+    "HELLO, OPEN SOURCE",
+    "Let's make some change!",
     'Cubeular!',
     'Hello Open Source!',
     'Whaddup??',
@@ -17,5 +19,4 @@ const greetings = [
     'Come fly with me!',
     'Hello Open Source',
     'Cubey Bird',
-    'Hello Open Source!'
 ];
