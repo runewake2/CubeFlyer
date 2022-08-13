@@ -8,6 +8,7 @@ const greetings = [
     'Hello, this is a greeting, please be greeted',
     'A Whole New Dimension!',
     'Are These Voxels?',
+    'Hello Open Source',
     'Cubey Bird',
-    'Hello Open Source!',
+    'Hello Open Source!'
 ];
