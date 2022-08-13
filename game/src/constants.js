@@ -10,5 +10,4 @@ const greetings = [
     'Are These Voxels?',
     'Cubey Bird',
     'Hello Open Source!',
-    'I am tried of this'
 ];
