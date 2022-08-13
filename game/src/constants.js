@@ -5,8 +5,6 @@ const greetings = [
     'It\'s a bird!',
     'It\'s a plane!',
     '1000% more Cube!',
+    'Hello, this is a greeting, please be greeted',
     'A Whole New Dimension!',
-    'It D&Ds'
-    'Are These Voxels?',
-    'Come fly with me!',
 ];
