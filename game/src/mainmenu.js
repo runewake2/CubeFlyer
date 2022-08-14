@@ -133,6 +133,7 @@ class MainMenu extends GameObject {
         this.hudTexture.addControl(this.welcomeText);
         this.hudTexture.addControl(this.greetingText);
         this.hudTexture.addControl(this.instructionsText);
+        this.hudTexture.addControl(this.highScoreText);
     }
 
     
@@ -140,6 +141,7 @@ class MainMenu extends GameObject {
         this.hudTexture.removeControl(this.welcomeText);
         this.hudTexture.removeControl(this.greetingText);
         this.hudTexture.removeControl(this.instructionsText);
+        this.hudTexture.addControl(this.highScoreText);
     }
 }
 
