@@ -2,9 +2,10 @@ var score = 0;
 var scoreText;
 var highScoreText2;
 var highScore = 0;
+var hudTexture;
 
 var createHud = function() {
-    var hudTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+    hudTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
 
     // Create a Text Block that can display the current score
     scoreText = new BABYLON.GUI.TextBlock();
