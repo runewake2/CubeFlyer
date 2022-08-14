@@ -1,5 +1,6 @@
 var score = 0;
 var scoreText;
+var highScoreText2;
 var highScore = 0;
 
 var createHud = function() {
