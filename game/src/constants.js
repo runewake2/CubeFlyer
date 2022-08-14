@@ -9,6 +9,12 @@ const greetings = [
     'A world of unending flight',
     'Come take a flight',
     'Ready for takeoff!',
+<<<<<<< HEAD
     'Go high or go boom!',
     'It\'s an airballoon' 
+=======
+    'go high or go boom!',
+    'it\'s an airballoon',
+    'Are These Voxels?'
+>>>>>>> 1eaf40029484d56c7fb8d483535656b566391911
 ];
