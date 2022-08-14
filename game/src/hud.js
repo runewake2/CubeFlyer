@@ -1,5 +1,6 @@
 var score = 0;
 var scoreText;
+var highScore = 0;
 
 var createHud = function() {
     var hudTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
@@ -21,6 +22,9 @@ var createHud = function() {
 
 var updateScoreText = function() {
     scoreText.text = "Score: " + score;
+    if(score > highScore){
+        highScore = score;
+    }
 }
 
 var resetScore = function() {
