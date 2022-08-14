@@ -29,6 +29,7 @@ var createHud = function() {
     updateScoreText();
 
     hudTexture.addControl(scoreText);
+    
 }
 
 var updateScoreText = function() {
@@ -37,12 +38,16 @@ var updateScoreText = function() {
         highScore = score;
     }
     highScoreText2.text = "High Score: " + highScore;
+    
+    hudTexture.addControl(highScoreText2);
 }
 
 var resetScore = function() {
     console.log("Score reset at: " + score);
     score = 0;
     updateScoreText();
+    
+    hudTexture.removeControl(highScoreText2);
 }
 
 var addScore = function(points) {
