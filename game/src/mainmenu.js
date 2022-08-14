@@ -94,7 +94,7 @@ class MainMenu extends GameObject {
         this.welcomeText.text = "Flying Cube Game!";
         this.welcomeText.fontFamily = "Impact";
         this.welcomeText.color = "white";
-        this.welcomeText.fontSize = 72;
+        this.welcomeText.fontSize = 70;
         this.welcomeText.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
         this.welcomeText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
         this.welcomeText.width = .5;
@@ -108,7 +108,7 @@ class MainMenu extends GameObject {
         this.greetingText.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
         this.greetingText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
         this.greetingText.width = .5;
-        this.greetingText.height = .7;
+        this.greetingText.height = .8;
 
         this.instructionsText = new BABYLON.GUI.TextBlock();
         this.instructionsText.text = "press any key to play";
