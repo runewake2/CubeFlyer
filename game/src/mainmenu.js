@@ -94,11 +94,11 @@ class MainMenu extends GameObject {
         this.welcomeText.text = "Flying Cube Game!";
         this.welcomeText.fontFamily = "Impact";
         this.welcomeText.color = "white";
-        this.welcomeText.fontSize = 72;
+        this.welcomeText.fontSize = 70;
         this.welcomeText.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
         this.welcomeText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
         this.welcomeText.width = .5;
-        this.welcomeText.height = .6;
+        this.welcomeText.height = .5;
         
         this.greetingText = new BABYLON.GUI.TextBlock();
         this.greetingText.text = greeting;
@@ -108,7 +108,7 @@ class MainMenu extends GameObject {
         this.greetingText.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
         this.greetingText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
         this.greetingText.width = .5;
-        this.greetingText.height = .7;
+        this.greetingText.height = .8;
 
         this.instructionsText = new BABYLON.GUI.TextBlock();
         this.instructionsText.text = "press any key to play";
@@ -119,10 +119,21 @@ class MainMenu extends GameObject {
         this.instructionsText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
         this.instructionsText.width = .5;
         this.instructionsText.height = .9;
+        
+        this.highScoreText = new BABYLON.GUI.TextBlock();
+        this.highScoreText.text = highScore;
+        this.highScoreText.fontFamily = "Impact";
+        this.highScoreText.color = "white";
+        this.highScoreText.fontSize = 28;
+        this.highScoreText.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
+        this.highScoreText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
+        this.highScoreText.width = .5;
+        this.highScoreText.height = .8;
     
         this.hudTexture.addControl(this.welcomeText);
         this.hudTexture.addControl(this.greetingText);
         this.hudTexture.addControl(this.instructionsText);
+        this.hudTexture.addControl(this.highScoreText);
     }
 
     
@@ -130,6 +141,7 @@ class MainMenu extends GameObject {
         this.hudTexture.removeControl(this.welcomeText);
         this.hudTexture.removeControl(this.greetingText);
         this.hudTexture.removeControl(this.instructionsText);
+        this.hudTexture.addControl(this.highScoreText);
     }
 }
 

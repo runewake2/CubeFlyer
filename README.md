@@ -1,5 +1,4 @@
 # The Flying Cube Game!
-
 Hi!
 
 This project is intended to help introduce you to open source! It's a javascript based 3D game built with [Babylon.JS](https://github.com/BabylonJS) that lets you fly a Cube through a set of obstacles.
