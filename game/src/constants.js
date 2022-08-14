@@ -10,7 +10,6 @@ const greetings = [
     "it's called cubism bro",
     'Hello, this is a greeting, please be greeted',
     'A Whole New Dimension!',
-    'Are These Voxels?'
     'Are These Voxels?',
     "HELLO, OPEN SOURCE",
     "Let's make some change!",
