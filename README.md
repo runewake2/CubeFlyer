@@ -1,5 +1,4 @@
 # The Flying Cube Game!
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4459e5bd-f0a5-4b06-8317-683bf91fc9c7/deploy-status)](https://app.netlify.com/sites/cubeflyer-m/deploys)
 Hi!
 
 This project is intended to help introduce you to open source! It's a javascript based 3D game built with [Babylon.JS](https://github.com/BabylonJS) that lets you fly a Cube through a set of obstacles.
