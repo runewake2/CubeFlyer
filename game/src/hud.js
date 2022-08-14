@@ -15,6 +15,16 @@ var createHud = function() {
     scoreText.width = .5;
     scoreText.height = .15;
 
+    // Create a High Score Text Block
+    highScoreText2 = new BABYLON.GUI.TextBlock();
+    highScoreText2.fontFamily = "Helvetica, sans-serif";
+    highScoreText2.color = "white";
+    highScoreText2.fontSize = 48;
+    highScoreText2.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
+    highScoreText2.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_LEFT;
+    highScoreText2.width = .5;
+    highScoreText2.height = .15;
+    
     updateScoreText();
 
     hudTexture.addControl(scoreText);
@@ -25,6 +35,7 @@ var updateScoreText = function() {
     if(score > highScore){
         highScore = score;
     }
+    highScoreText2.text = "High Score: " + highScore;
 }
 
 var resetScore = function() {
