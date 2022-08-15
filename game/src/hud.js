@@ -3,6 +3,7 @@ var scoreText;
 var highScoreText2;
 var highScore = 0;
 var hudTexture;
+var highScoreDisplayed = false;
 
 var createHud = function() {
     hudTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
@@ -40,7 +41,12 @@ var updateScoreText = function() {
     }
     highScoreText2.text = "High Score: " + highScore;
     
-    hudTexture.addControl(highScoreText2);
+
+    if(!highScoreDisplayed){
+        hudTexture.addControl(highScoreText2);
+        highScoreDisplayed = true;
+    }
+    
 }
 
 var resetScore = function() {
@@ -49,6 +55,7 @@ var resetScore = function() {
     updateScoreText();
     
     hudTexture.removeControl(highScoreText2);
+    highScoreDisplayed = false;
 }
 
 var addScore = function(points) {
