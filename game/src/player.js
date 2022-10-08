@@ -19,6 +19,7 @@ class Player extends GameObject {
         const boxOptions = {width: 1, height: 1, depth: 1};
         this.playerMesh = BABYLON.MeshBuilder.CreateBox("bird", boxOptions, scene);
         this.playerMaterial = new BABYLON.StandardMaterial("Player Material", scene);
+        this.playerMaterial.diffuseTexture = new BABYLON.Texture("https://avatars.githubusercontent.com/u/8835499?v=4", scene);
         this.playerMesh.material = this.playerMaterial;
         this.playerMesh.material.diffuseColor = BABYLON.Color3.White();
     }
