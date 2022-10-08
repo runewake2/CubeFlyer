@@ -15,6 +15,9 @@ const greetings = [
     'I love Github!',
     'Hello, I did it!!!!',
     'hi',
-    'hi hi'
+    'hi hi',
+    'Hello! It\'s Ryan, Coco, William, Terrie！！！',
+    'some changes!',
+    'Just breaking things :)'
 ];
 
