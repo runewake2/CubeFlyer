@@ -6,6 +6,9 @@ const greetings = [
     'It\'s a plane!',
     '1000% more Cube!',
     'A Whole New Dimension!',
+    'Maybe if it was more aerodynamic it could\'ve gone further...',
+    'Is that the best you can do?',
     'Get ready to fly!',
     'Open up the sky'   
+
 ];
