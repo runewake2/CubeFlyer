@@ -11,5 +11,7 @@ const greetings = [
     'Beautiful World',
     'From local pc',
     'Follow @dylanullrich on GH',
+    'Hello! It\'s Ryan, Coco, William, Terrie！！！',
+    'some changes!',
     'Just breaking things :)'
 ];
