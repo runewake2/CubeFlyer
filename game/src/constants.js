@@ -10,5 +10,6 @@ const greetings = [
     'Maybe if it was more aerodynamic it could\'ve gone further...',
     'Is that the best you can do?',
     'Get ready to fly!',
-    'Open up the sky'   
+    'Open up the sky',
+    'Let\'s Go!!!'
 ];
