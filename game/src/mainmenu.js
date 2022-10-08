@@ -119,10 +119,21 @@ class MainMenu extends GameObject {
         this.instructionsText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
         this.instructionsText.width = .5;
         this.instructionsText.height = .9;
+        
+        this.highScoreText = new BABYLON.GUI.TextBlock();
+        this.highScoreText.text = highScore;
+        this.highScoreText.fontFamily = "Impact";
+        this.highScoreText.color = "white";
+        this.highScoreText.fontSize = 28;
+        this.highScoreText.verticalAlignment = BABYLON.GUI.TextBlock.VERTICAL_ALIGNMENT_TOP;
+        this.highScoreText.horizontalAlignment = BABYLON.GUI.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
+        this.highScoreText.width = .5;
+        this.highScoreText.height = .8;
     
         this.hudTexture.addControl(this.welcomeText);
         this.hudTexture.addControl(this.greetingText);
         this.hudTexture.addControl(this.instructionsText);
+        this.hudTexture.addControl(this.highScoreText);
     }
 
     
@@ -130,6 +141,7 @@ class MainMenu extends GameObject {
         this.hudTexture.removeControl(this.welcomeText);
         this.hudTexture.removeControl(this.greetingText);
         this.hudTexture.removeControl(this.instructionsText);
+        this.hudTexture.addControl(this.highScoreText);
     }
 }
 
