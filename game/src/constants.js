@@ -5,5 +5,19 @@ const greetings = [
     'It\'s a bird!',
     'It\'s a plane!',
     '1000% more Cube!',
-    'A Whole New Dimension!'
+    'A Whole New Dimension!',
+    'You\'ve Been Cubed!',
+    'Don\'t be a Square!',
+    'Blastoff!',
+    'Get In Shape!',
+    'Error 404 CUBE Not Found!',
+    'Drop the Cube!',
+    'Houston, we have a cube problem!',
+    'Up Up and Away!',
+    'The Building Blocks Of Flight!',
+    'Simple Geometry!',
+    'I Believe I Can Cube!',
+    'To Cube or not to Cube!',
+    'It's hip to be square!'
 ];
+
