@@ -7,5 +7,6 @@ const greetings = [
     '1000% more Cube!',
     'A Whole New Dimension!',
     'Hello here!',
-    'Beautiful World'
+    'Beautiful World',
+    'From local pc'
 ];
