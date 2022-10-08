@@ -7,5 +7,6 @@ const greetings = [
     '1000% more Cube!',
     'A Whole New Dimension!',
     'Get ready to fly!',
-    'Open up the sky'   
+    'Open up the sky',
+    'Let\'s Go!!!'
 ];
