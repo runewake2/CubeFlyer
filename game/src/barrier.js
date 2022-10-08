@@ -8,7 +8,6 @@ class Barrier extends GameObject {
     }
 
     init() {
-        this.isPassed = false;
         // This is hardcoded for now - should be some location off the right side of the screen
         this.location = 15;
 
@@ -34,13 +33,11 @@ class Barrier extends GameObject {
     update(deltaTime) {
 
         this.location -= deltaTime * obstacleSpeed;
-        if (this.location < 0 && !this.isPassed) {
-            this.isPassed = true;
-            addScore(1);
-        }
+
         // Update the players physics:
         this.ceilingBox.position.x = this.location;
         this.floorBox.position.x = this.location;
+
         if (this.location < -25) {
             destroyObject(this);
         }
