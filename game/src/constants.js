@@ -18,6 +18,6 @@ const greetings = [
     'Simple Geometry!',
     'I Believe I Can Cube!',
     'To Cube or not to Cube!',
-    'It's hip to be square!'
+    'It\'s hip to be square!'
 ];
 
