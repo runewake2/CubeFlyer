@@ -6,6 +6,7 @@ const greetings = [
     'It\'s a plane!',
     '1000% more Cube!',
     'A Whole New Dimension!',
+    'I love Github!',
     'Hello, I did it!!!!',
     'hi',
     'hi hi'
