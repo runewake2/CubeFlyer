@@ -7,4 +7,8 @@ const greetings = [
     '1000% more Cube!',
     'A Whole New Dimension!',
     'Cubeify everything!'
+    'I love Github!',
+    'Hello, I did it!!!!',
+    'hi',
+    'hi hi'
 ];
